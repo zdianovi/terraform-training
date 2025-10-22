@@ -1,4 +1,3 @@
-//Exercize 1
 //main.tf
 //provider.terraform 
 //security.tf
