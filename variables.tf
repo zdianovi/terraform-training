@@ -29,4 +29,31 @@ variable "security_policy_name" {
   description = "sec_policy_name"
   default = "ZDIANOVI WAF Policy 1234"
 }
+//here
+variable "akamai_client_secret" {
+    type        = string
+    description = "akamai_client_secret"
+   
+}
+variable "akamai_host" {
+    type        = string
+    description = "akamai_host"
+   
 
+}
+variable "akamai_access_token" {
+    type        = string
+    description = "akamai_access_token"
+ 
+
+}
+variable "akamai_client_token" {
+    type        = string
+    description = "akamai_client_token"
+
+}
+variable "akamai_account_key" {
+    type        = string
+    description = "akamai_account_key"
+    
+}
