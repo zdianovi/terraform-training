@@ -39,6 +39,9 @@ data "akamai_properties" "my_properties" {
   
 # }
 
+locals {
+    notes = "TF-3001${var.group_id}"
+}
 
 
 
