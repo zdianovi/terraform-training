@@ -27,3 +27,8 @@ output "my_contract_id" {
 # output "my_properties" {
 #   value = data.akamai_properties.my_properties
 # }
+
+
+output "akamai_host" {
+value = var.akamai_host
+}
