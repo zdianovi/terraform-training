@@ -4,8 +4,21 @@ resource "akamai_property" "my-property" {
     contract_id = "1-1NC95D"
     group_id    = "19293"
     rule_format = "v2023-01-05"
+    dynamic "hostnames" {
+      for_each = local.app_hostnames
+      content {
+        cname_from = hostnames.value
+        cname_to = "example.com.edgesuite.com"
+        cert_provisioning_type = "DEFAULT"
+        }
+    }
 }
  
+ locals {
+    
+  app_hostnames = [for app in var.apps : "${app}.example.com"]
+ 
+} 
 
 resource "akamai_cp_code" "cp_code" {
   name = "ZSD CP Code"
