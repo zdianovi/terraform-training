@@ -64,3 +64,6 @@ variable "ab_test" {
     default = "A"
     
 }
+variable "apps" {
+  default = [ "www", "api", "blog", "shop", "cdn"]
+}

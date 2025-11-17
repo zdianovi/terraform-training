@@ -44,4 +44,13 @@ locals {
 }
 
 
+variable "domains" {
+  default = ["example.com", "api.example.com"]
+}
+ 
+locals {
+  app_hostnames = [for app in var.apps : "${app}.example.com"]
+ 
+} 
+
 

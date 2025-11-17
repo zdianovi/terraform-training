@@ -36,3 +36,7 @@ value = var.akamai_host
 output "edgehostname" {
   value = akamai_edge_hostname.ehn.edge_hostname
 }
+
+output "app_hostnames" {
+  value = local.app_hostnames
+}
