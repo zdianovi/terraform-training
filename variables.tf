@@ -57,3 +57,10 @@ variable "akamai_account_key" {
     description = "akamai_account_key"
     
 }
+
+variable "ab_test" {
+    type        = string
+    description = "Exercise 4"
+    default = "A"
+    
+}

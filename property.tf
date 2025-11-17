@@ -16,7 +16,7 @@ resource "akamai_cp_code" "cp_code" {
 
 resource "akamai_edge_hostname" "ehn" {
  contract_id = "1-1NC95D"
- edge_hostname = "smacleod-internal.host.edgesuite.net"
+ edge_hostname = var.ab_test == "A" ? "smacleod-internal.host.edgesuite.net" : "smacleod-amd1.akamaized.net"
  group_id = "19293"
  ip_behavior = "IPV4"
  product_id = "prd_Site_Accel"
